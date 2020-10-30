@@ -11,3 +11,11 @@ mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
+
+// routes
+(require("./routes/api.js")(app));
+(require("./routes/view.js")(app));
+
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}!`);
+});
